@@ -1,0 +1,15 @@
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\bin\Debug\net6.0\switchCase.exe
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\bin\Debug\net6.0\switchCase.deps.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\bin\Debug\net6.0\switchCase.runtimeconfig.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\bin\Debug\net6.0\switchCase.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\bin\Debug\net6.0\switchCase.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\switchCase.csproj.AssemblyReference.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\switchCase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\switchCase.AssemblyInfoInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\switchCase.AssemblyInfo.cs
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\switchCase.csproj.CoreCompileInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\switchCase.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\refint\switchCase.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\switchCase.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\switchCase.genruntimeconfig.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\switchCase\switchCase\obj\Debug\net6.0\ref\switchCase.dll
