@@ -1,0 +1,15 @@
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\bin\Debug\net6.0\VariablesAndTypes.exe
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\bin\Debug\net6.0\VariablesAndTypes.deps.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\bin\Debug\net6.0\VariablesAndTypes.runtimeconfig.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\bin\Debug\net6.0\VariablesAndTypes.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\bin\Debug\net6.0\VariablesAndTypes.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\VariablesAndTypes.csproj.AssemblyReference.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\VariablesAndTypes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\VariablesAndTypes.AssemblyInfoInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\VariablesAndTypes.AssemblyInfo.cs
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\VariablesAndTypes.csproj.CoreCompileInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\VariablesAndTypes.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\refint\VariablesAndTypes.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\VariablesAndTypes.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\VariablesAndTypes.genruntimeconfig.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\VariablesAndTypes\VariablesAndTypes\obj\Debug\net6.0\ref\VariablesAndTypes.dll
