@@ -1,0 +1,15 @@
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\bin\Debug\net6.0\KararYapilari_If.exe
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\bin\Debug\net6.0\KararYapilari_If.deps.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\bin\Debug\net6.0\KararYapilari_If.runtimeconfig.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\bin\Debug\net6.0\KararYapilari_If.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\bin\Debug\net6.0\KararYapilari_If.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\KararYapilari_If.csproj.AssemblyReference.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\KararYapilari_If.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\KararYapilari_If.AssemblyInfoInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\KararYapilari_If.AssemblyInfo.cs
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\KararYapilari_If.csproj.CoreCompileInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\KararYapilari_If.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\refint\KararYapilari_If.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\KararYapilari_If.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\KararYapilari_If.genruntimeconfig.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\KararYapilari_If\KararYapilari_If\obj\Debug\net6.0\ref\KararYapilari_If.dll
