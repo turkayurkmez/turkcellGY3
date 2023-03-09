@@ -1,0 +1,15 @@
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\bin\Debug\net6.0\whileLoop.exe
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\bin\Debug\net6.0\whileLoop.deps.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\bin\Debug\net6.0\whileLoop.runtimeconfig.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\bin\Debug\net6.0\whileLoop.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\bin\Debug\net6.0\whileLoop.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\whileLoop.csproj.AssemblyReference.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\whileLoop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\whileLoop.AssemblyInfoInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\whileLoop.AssemblyInfo.cs
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\whileLoop.csproj.CoreCompileInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\whileLoop.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\refint\whileLoop.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\whileLoop.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\whileLoop.genruntimeconfig.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\whileLoop\whileLoop\obj\Debug\net6.0\ref\whileLoop.dll

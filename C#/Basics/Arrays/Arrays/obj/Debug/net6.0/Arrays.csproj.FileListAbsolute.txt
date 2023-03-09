@@ -1,0 +1,15 @@
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\bin\Debug\net6.0\Arrays.exe
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\bin\Debug\net6.0\Arrays.deps.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\bin\Debug\net6.0\Arrays.runtimeconfig.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\bin\Debug\net6.0\Arrays.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\bin\Debug\net6.0\Arrays.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\Arrays.csproj.AssemblyReference.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\Arrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\Arrays.AssemblyInfoInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\Arrays.AssemblyInfo.cs
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\Arrays.csproj.CoreCompileInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\Arrays.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\refint\Arrays.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\Arrays.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\Arrays.genruntimeconfig.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\Arrays\Arrays\obj\Debug\net6.0\ref\Arrays.dll

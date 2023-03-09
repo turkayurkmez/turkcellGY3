@@ -31,6 +31,23 @@ switch (geometry)
         break;
 }
 
+
+Console.WriteLine("Bir sembol seçiniz (Sinek, Maça, Kupa, Karo)");
+string symbol = Console.ReadLine();
+
+switch (symbol)
+{
+    case "Sinek" or "Maça":
+        Console.WriteLine("Siyah renk");
+        break;
+    case "Karo":
+    case "Kupa":
+        Console.WriteLine("Kırmızı renk");
+        break;
+    default:
+        break;
+}
+
 //switch (DateTime.Now.DayOfWeek)
 //{
 //    case DayOfWeek.Sunday:

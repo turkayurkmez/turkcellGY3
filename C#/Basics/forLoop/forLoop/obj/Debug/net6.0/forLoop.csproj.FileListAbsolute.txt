@@ -1,0 +1,15 @@
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\bin\Debug\net6.0\forLoop.exe
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\bin\Debug\net6.0\forLoop.deps.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\bin\Debug\net6.0\forLoop.runtimeconfig.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\bin\Debug\net6.0\forLoop.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\bin\Debug\net6.0\forLoop.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\forLoop.csproj.AssemblyReference.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\forLoop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\forLoop.AssemblyInfoInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\forLoop.AssemblyInfo.cs
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\forLoop.csproj.CoreCompileInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\forLoop.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\refint\forLoop.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\forLoop.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\forLoop.genruntimeconfig.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\forLoop\forLoop\obj\Debug\net6.0\ref\forLoop.dll
