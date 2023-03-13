@@ -1,0 +1,15 @@
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\bin\Debug\net6.0\creatingFunctions.exe
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\bin\Debug\net6.0\creatingFunctions.deps.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\bin\Debug\net6.0\creatingFunctions.runtimeconfig.json
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\bin\Debug\net6.0\creatingFunctions.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\bin\Debug\net6.0\creatingFunctions.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\creatingFunctions.csproj.AssemblyReference.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\creatingFunctions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\creatingFunctions.AssemblyInfoInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\creatingFunctions.AssemblyInfo.cs
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\creatingFunctions.csproj.CoreCompileInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\creatingFunctions.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\refint\creatingFunctions.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\creatingFunctions.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\creatingFunctions.genruntimeconfig.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\Basics\creatingFunctions\creatingFunctions\obj\Debug\net6.0\ref\creatingFunctions.dll

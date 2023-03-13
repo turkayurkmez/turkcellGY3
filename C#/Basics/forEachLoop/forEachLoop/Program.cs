@@ -10,7 +10,14 @@ List<string> shoppingCart = new List<string>();
 
 foreach (var product in productList)
 {
+
     shoppingCart.Add(product);
-    productList.Remove(product);
+    // productList.Remove(product);
 }
+
+foreach (var item in shoppingCart)
+{
+    productList.Remove(item);
+}
+
 
