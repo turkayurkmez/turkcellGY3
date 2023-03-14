@@ -1,0 +1,15 @@
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\bin\Debug\net6.0\ClassVSObject.exe
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\bin\Debug\net6.0\ClassVSObject.deps.json
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\bin\Debug\net6.0\ClassVSObject.runtimeconfig.json
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\bin\Debug\net6.0\ClassVSObject.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\bin\Debug\net6.0\ClassVSObject.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\ClassVSObject.csproj.AssemblyReference.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\ClassVSObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\ClassVSObject.AssemblyInfoInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\ClassVSObject.AssemblyInfo.cs
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\ClassVSObject.csproj.CoreCompileInputs.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\ClassVSObject.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\refint\ClassVSObject.dll
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\ClassVSObject.pdb
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\ClassVSObject.genruntimeconfig.cache
+C:\Users\turka\source\repos\Turkcell 3\C#\OOP\OOPOverview\ClassVSObject\obj\Debug\net6.0\ref\ClassVSObject.dll
