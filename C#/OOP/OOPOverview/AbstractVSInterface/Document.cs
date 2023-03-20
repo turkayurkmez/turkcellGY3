@@ -5,7 +5,7 @@
         public abstract void Save();
         public abstract void Open();
 
-        public abstract void Print();
+        //public abstract void Print();
 
         public void Copy(string from, string to)
         {
@@ -16,6 +16,11 @@
         public string Owner { get; set; }
     }
 
+
+    public interface IPrintable
+    {
+        void Print();
+    }
     public class PdfDocument : Document
     {
         public override void Open()
@@ -23,10 +28,10 @@
             Console.WriteLine("Pdf açılıyor");
         }
 
-        public override void Print()
-        {
-            Console.WriteLine("Pdf çıktısı alındı");
-        }
+        //public override void Print()
+        //{
+        //    Console.WriteLine("Pdf çıktısı alındı");
+        //}
 
         public override void Save()
         {
@@ -35,7 +40,7 @@
         }
     }
 
-    public class ExcelDocument : Document
+    public class ExcelDocument : Document, IPrintable
     {
         public override void Open()
         {
@@ -43,7 +48,7 @@
 
         }
 
-        public override void Print()
+        public void Print()
         {
             Console.WriteLine("Excel çıktısı alındı");
 
@@ -56,7 +61,7 @@
         }
     }
 
-    public class WordDocument : Document
+    public class WordDocument : Document, IPrintable
     {
         public override void Open()
         {
@@ -64,7 +69,7 @@
 
         }
 
-        public override void Print()
+        public void Print()
         {
             Console.WriteLine("Word çıktısı alındı");
 
@@ -78,6 +83,14 @@
         }
     }
 
+
+    public class PrintDocumentComponent
+    {
+        public void Print(IPrintable document)
+        {
+            document.Print();
+        }
+    }
 
 
 }

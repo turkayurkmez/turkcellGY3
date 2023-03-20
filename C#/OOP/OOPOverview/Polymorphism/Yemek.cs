@@ -21,4 +21,10 @@
     {
 
     }
+    public class Kofte : Yemek
+    {
+
+    }
+
+
 }
