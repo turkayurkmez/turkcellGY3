@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Customer customer = new Customer { Name = "Türkay", Cart = CartType.Gold };
+Customer customer = new Customer { Name = "Türkay", Cart = new Gold() };
 OrderManager orderManager = new OrderManager() { Customer = customer };
 
 
@@ -44,6 +44,14 @@ public class Gold : ICartType
     public double GetDiscounted(double totalPrice)
     {
         return totalPrice * .85;
+    }
+}
+
+public class Premium : ICartType
+{
+    public double GetDiscounted(double totalPrice)
+    {
+        return totalPrice * .8;
     }
 }
 
