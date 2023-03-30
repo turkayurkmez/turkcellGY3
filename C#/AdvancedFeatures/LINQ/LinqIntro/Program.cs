@@ -17,3 +17,8 @@ var nameAndPriceList = from p in products
 
 nameAndPriceList.ToList().ForEach(x => Console.WriteLine($"......{x.Ad}\t{x.Fiyat}"));
 
+var sameResultWithExt = products.Where(p => p.Price < 1000)
+                                .Select(p => new { Ad = p.Name, Fiyat = p.Price })
+                                .ToList();
+
+

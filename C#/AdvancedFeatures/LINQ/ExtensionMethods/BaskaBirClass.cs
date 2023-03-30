@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ExtensionMethods
+﻿namespace ExtensionMethods
 {
-    internal class BaskaBirClass
+    public class BaskaBirClass
     {
+        void test()
+        {
+            int s = 5;
+            s.GetSquare();
+        }
     }
 }
