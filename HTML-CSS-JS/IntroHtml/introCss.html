@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            /*
+            Bu element selektör
+            */
+            font-family: 'Trebuchet MS';
+            color: black;
+            font-size: 14px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Calibri';
+            color: brown;
+        }
+
+        .productHeader {
+            /* .class selektörü */
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #buttonEkle {
+            /*
+             #id selektörü:
+            */
+            color: white;
+            font-weight: bold;
+            background-color: green;
+            text-align: center;
+            font-size: 10px;
+            border-radius: 20px;
+            box-shadow: gray 5px 5px 3px;
+        }
+
+        .menu {
+            list-style: none;
+        }
+
+        .menu li {
+            display: inline;
+            margin: 10px;
+        }
+
+        .menu li a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu li a:hover {
+            color: brown;
+            font-style: italic;
+            font-size: larger;
+
+        }
+
+        .menu li a:visited {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Abi CSS çok iyi sen de gelsene</h3>
+    <p style="color: chocolate; font-size: 12px;">Bu paragrafa özel stil</p>
+    <p>Normal paragraf</p>
+
+    <h3 class="productHeader">Harika bir Ürün</h3>
+    <p class="productHeader">Ürünün açıklaması</p>
+
+    <button id="buttonEkle">Ekle!</button>
+    <button type="submit" id="buttonEkle">
+        <!-- <h4>Olmaz mı?</h4> -->
+        <!-- <table border="1">
+            <tr>
+                <td>Hadi</td>
+                <td>olmaz</td>
+                <td>diyin</td>
+            </tr>
+        </table> -->
+        <p>Button içinde paragraf mı?</p>
+    </button>
+    <input type="button" value="Ekle"/>
+    <input type="submit" value="Ekle"/>
+
+    <ul class="menu">
+        <li>
+            <a href="#">JavaScript</a>
+        </li>
+        <li>
+            <a href="#">HTML</a>
+        </li>
+        <li>
+            <a href="#">CSS</a>
+        </li>
+    </ul>
+
+
+    <div>
+        <a href="http://www.turkcell.com.tr">başka bir anchor</a>
+    </div>
+
+</body>
+
+</html>
