@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="fetch" onclick="getMovieDetails()">Fetch ile getir</button>
+    <div>
+        <h3 id="title"></h3>
+        <p id="crawl"></p>
+        Yönetmen: <p id="director"></p>
+    </div>
+
+    <button id="jq">Jquery ile getir</button>
+    <div>
+        <h3 id="title1"></h3>
+        <p id="crawl1"></p>
+        Yönetmen: <p id="director1"></p>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+
+
+        async function getMovieDetails() {
+            let response = await fetch("https://swapi.dev/api/films/1/");
+            if (response.ok) {
+                let json = await response.json();
+                showOnPage(json);
+                console.log(json);
+            } 
+
+        }
+
+        function showOnPage(film) {
+            document.getElementById('title').innerText = film.title;
+            document.getElementById('crawl').innerText = film.opening_crawl;
+            document.getElementById('director').innerText = film.director;
+
+        }
+
+        $(document).ready(function () {
+            $('#jq').on('click', function () {
+                $.ajax({
+                    url: 'https://swapi.dev/api/films/1/',
+                    type: 'GET',
+                    success: function (data) {
+                        $('#title1').text(data.title);
+                        $('#crawl1').text(data.opening_crawl);
+                        $('#director1').text(data.director);
+                    },
+                    error:function(err){
+                        
+                    }
+                });
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
