@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="panel" onclick="tikla(event)">
+        <div id="section" onclick="tikla(event)">
+            <div id="container" onclick="tikla(event)">
+                <button id="buttonAddToCard" onclick="tikla(event)">Sepete Ekle</button>
+            </div>
+        </div>
+    </div>
+    <button id="alt">Alternatif Event</button>
+    <script>
+
+        document.getElementById('alt').addEventListener('click',function(){
+            alert('çalıştı');
+        });
+
+        function tikla(event) {
+            console.log(event);
+            event.cancelBubble = true;
+            var target = event.target;
+
+            //alert('button');
+            switch (target.id) {
+                case 'panel':
+                target.style = 'background-color: blue';
+                    break;
+                case 'section':
+                    target.style = 'background-color: black';
+                    break;
+                case 'container':
+                    target.style = 'background-color: red';
+                    break;
+                case 'buttonAddToCard':
+                    target.style = 'background-color: pink';
+                    break;
+
+                default:
+                    break;
+            }
+
+
+        }
+        function fn1() {
+            event.cancelBubble = true;
+           //alert('panel')
+        }
+        function fn2() {
+            event.cancelBubble = true;
+            //alert('section')
+        }
+        function fn3() {
+            event.cancelBubble = true;
+            //alert('container')
+        }
+    </script>
+</body>
+
+</html>

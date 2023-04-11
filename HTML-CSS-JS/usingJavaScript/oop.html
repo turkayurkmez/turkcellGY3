@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="showEmployees()">Çalışanları göster!</button>
+    <div id="employeePlaceHolder"></div>
+    <script>
+        //JSON: JavaScript Object Notation
+        var personel = {
+            ad: 'Türkay',
+            soyad: 'Ürkmez',
+            yas: 43
+        }
+        //var sayın ki; aşağıdaki personeller koleksiyonu bir api'den geliyor:
+        var personeller = [
+            {
+                ad: 'Türkay',
+                soyad: 'Ürkmez',
+                yas: 43
+            },
+            {
+                ad: 'Bradd',
+                soyad: 'Pitt',
+                yas: 59
+            },
+            {
+                ad: 'Angelina',
+                soyad: 'Jolie',
+                yas: 52
+            }
+        ];
+
+        function showEmployees() {
+            var table = document.createElement('table');
+            table.setAttribute('border',1);
+            personeller.forEach(function(employee, index){
+                console.table(employee);
+                var row = getEmployeeOnRow(employee);
+                table.append(row);
+
+            });
+
+            document.getElementById('employeePlaceHolder').innerHTML = '';
+            document.getElementById('employeePlaceHolder').appendChild(table);
+        }
+
+        function getEmployeeOnRow(employee){
+           
+            var row = document.createElement('tr');
+            var cellName = document.createElement('td');
+            var cellLastName = document.createElement('td');
+            var cellAge = document.createElement('td');
+
+            cellName.innerText = employee.ad;
+            cellLastName.innerText = employee.soyad;
+            cellAge.innerText = employee.yas;
+
+            row.appendChild(cellName);
+            row.appendChild(cellLastName);
+            row.appendChild(cellAge);
+
+            return row;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

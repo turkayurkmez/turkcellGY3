@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gContainer{
+            display: grid;
+            grid-template-areas:
+            'header header header header'
+            'nav content content content'
+            'footer footer footer footer'
+            ;
+            gap: 10p x;
+            background-color: silver;
+            padding: 5px;
+        }
+
+        .gContainer > div{
+            border: solid 1px black;
+            padding: 5px;
+            font-size: 14px;
+            text-align: center;
+            /* height: 100%;
+            width: 100%; */
+        }
+
+
+        .header{
+            grid-area: header;
+            background-color: aqua;
+        }
+        .nav{
+            grid-area: nav;
+            background-color: blueviolet;
+        }
+        .content{
+            grid-area: content;
+            background-color: aquamarine;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: cadetblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gContainer">
+        <div class="header">Başlık</div>
+        <div class="nav">Nav</div>
+        <div class="content">
+            <h3>Günün Tatlısı</h3>
+            <h4>Tulumba Tatlısı</h4>
+            <p>
+                
+            </p>
+        </div>
+        <div class="footer">Alt</div>
+
+    </div>
+</body>
+</html>

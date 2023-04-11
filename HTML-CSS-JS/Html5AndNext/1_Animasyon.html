@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 10px;
+            /**/
+            -moz-animation: ilkanimasyon 5s infinite;
+            -o-animation: ilkanimasyon 5s infinite;
+            -webkit-animation: ilkanimasyon 5s infinite;
+            animation: ilkanimasyon 5s infinite;
+        }
+
+        @-moz-keyframes ilkanimasyon {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        @keyframes ilkanimasyon {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        @-webkit-keyframes ilkanimasyon {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

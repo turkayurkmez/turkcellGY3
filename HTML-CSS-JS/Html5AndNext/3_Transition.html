@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .divler {
+            font-family: 'Times New Roman','Comic Sans MS';
+            font-size: large;
+            background: yellow;
+            background: -webkit-linear-gradient(left,red 0%,yellow 88%, magenta 100%);
+            background: -moz-linear-gradient(left,red 0%,yellow 88%, magenta 100%);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        #btnUzerimeGel {
+            color: white;
+            font-weight: bold;
+            /*background-color:rgba(234,34,23,0.1);*/
+            background-color: blue;
+            cursor: pointer;
+            border: 5px solid #abcdef;
+        }
+
+            #btnUzerimeGel:hover {
+                color: black;
+                background-color: yellow;
+                -moz-transition: all 2s;
+                -o-transition: all 2s;
+                -webkit-transition: all 2s;
+                transition: all 2s;
+            }
+
+        #btn2 {
+            background-color: red;
+            width: 100px;
+            height: 50px;
+            top: 50px;
+            left: 400px;
+            position: absolute;
+            -moz-transition: width 2s, height 5s;
+            -o-transition: width 2s, height 5s;
+            -webkit-transition: width 2s, height 5s;
+            transition: width 2s, height 5s;
+        }
+
+            #btn2:hover {
+            width:300px;
+            height:200px;
+            }
+    </style>
+</head>
+<body>
+    <div class="divler">
+        Ayhan Guney
+        <br />
+        <br />
+        Html5  Development
+    </div>
+    <button id="btnUzerimeGel">Uzerime Gel</button>
+    <button id="btn2">Uzerime Gel</button>
+</body>
+</html>

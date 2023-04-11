@@ -1,0 +1,64 @@
+p {
+    /*
+    Bu element selektör
+    */
+    font-family: 'Trebuchet MS';
+    color: black;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Calibri';
+    color: brown;
+}
+
+.productHeader {
+    /* .class selektörü */
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#buttonEkle {
+    /*
+     #id selektörü:
+    */
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 20px;
+    box-shadow: gray 5px 5px 3px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    display: inline;
+    margin: 10px;
+}
+
+.menu li a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: brown;
+    font-style: italic;
+    font-size: larger;
+
+}
+
+.menu li a:visited {
+    color: black;
+    text-decoration: none;
+}

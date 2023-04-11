@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="title">Başlık...</h3>
+    <input type="text" placeholder="Doğum yılınızı girin" id="year" value="" />
+    <button onclick="calculateAge()">Tamam</button><br>
+    <span id="result">0</span>
+
+
+    <legend>
+        <input type="text" name="" id="textName" placeholder="isim">
+        <button onclick="addItem()">Ekle</button> <br>
+        <ul id="list">
+
+        </ul>
+    </legend>
+
+    <script>
+        function calculateAge() {
+            var birthYear = document.getElementById('year').value;
+            var cumle;
+            if (isNaN(birthYear)) {
+                cumle = "Hatalı bir değer girdiniz!";
+            }
+            else {
+                var currentYear = new Date().getFullYear();
+                var age = currentYear - birthYear;
+                cumle = age;
+                document.getElementById('title').innerText = 'Doğum yılı girildi...';
+            }
+            document.getElementById('result').innerText = cumle;
+        }
+
+        var names = [];
+
+        function addItem() {
+            var name = document.getElementById('textName').value;
+            names.push(name);
+            showNamesInList(names);
+        }
+
+        function showNamesInList(names) {
+            var ul = document.getElementById('list');
+            ul.innerHTML='';
+            for (let index = 0; index < names.length; index++) {
+                const element = names[index];
+
+                var li = document.createElement('li');
+                li.innerText = element;
+                ul.append(li);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
