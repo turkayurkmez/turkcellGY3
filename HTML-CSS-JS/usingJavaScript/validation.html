@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/" method="post">
+        <input type="text" name="" class="required" id="textUserName" data-message="Kullanıcı adı boş olamaz!"
+            data-target="messageUserName">
+        <span id="messageUserName"></span>
+        <br>
+        <input type="password" class="required" name="" id="textPassword" data-message="Şifreyi unuttunuz!"
+            data-target="messagePassword">
+        <span id="messagePassword"></span><br>
+        <input type="number" class="required" data-message="Lütfen yaş giriniz" data-target="messageAge" name="" id="textAge">
+        <span id="messageAge"></span><br>
+        <select id="selectCountry" class="required" data-message="Ülke seçiniz" data-target="messageCountry">
+            <option value="">Lütfen Seçiniz</option>
+            <option value="tr">Türkiye</option>
+            <option value="fr">Fransa</option>
+            <option value="it">İtalya</option>
+        </select>
+        <span id="messageCountry"></span>
+        <button type="submit" onclick="return validate()">Ekle</button>
+
+    </form>
+    <script src="validate.js">
+    </script>
+</body>
+
+</html>
