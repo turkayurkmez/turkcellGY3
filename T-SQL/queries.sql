@@ -333,3 +333,230 @@ SELECT CompanyName, Address, City,Country, 'Müşteri' as Durum FROM Customers
 UNION
 SELECT CompanyName, Address, City,Country, 'Tedarikçi' FROM Suppliers
 ORDER BY Country
+
+-- Ürünlerin fotoğraf arama linklerini gösteren result set:
+SELECT 
+  'https://www.google.com/search?q='+ProductName+'&source=lnms&tbm=isch'
+FROM Products
+
+--View---
+CREATE VIEW AktifUrunler
+AS
+SELECT
+   ProductName, UnitPrice
+FROM Products
+WHERE Discontinued = 0
+
+
+SELECT * FROM AktifUrunler
+
+CREATE VIEW KategoriMenusu
+AS
+SELECT
+   CategoryName, COUNT(Distinct ProductName) as Quantity
+FROM Categories LEFT JOIN Products 
+ON Categories.CategoryID = Products.CategoryID
+GROUP BY CategoryName
+
+
+
+SELECT * FROM KategoriMenusu WHERE Quantity > 5
+order by Quantity desc
+
+-- 
+CREATE VIEW DetailedOrders
+AS
+SELECT
+  o.OrderID, 
+  c.CompanyName, o.OrderDate,
+  e.FirstName + ' ' + e.LastName 'Çalışan',
+  s.CompanyName 'Kargo',
+  sp.CompanyName 'Tedarikçi',
+  ca.CategoryName,
+  p.ProductName,
+  od.Quantity,
+  od.UnitPrice * od.Quantity 'Ödenen'
+FROM Employees as e JOIN Orders o
+ON e.EmployeeId = o.EmployeeID
+JOIN Customers c 
+ON o.CustomerID = c.CustomerID
+JOIN Shippers s
+ON s.ShipperID = o.ShipVia
+JOIN [Order Details] od
+ON od.OrderID = o.OrderID
+JOIN Products p
+ON p.ProductID = od.ProductID
+JOIN Suppliers sp
+ON p.SupplierID = sp.SupplierID
+JOIN Categories ca
+ON ca.CategoryID = p.CategoryID
+
+SELECT 
+   CategoryName, COUNT(OrderID) as TotalOrder
+FROM DetailedOrders
+GROUP BY CategoryName
+ORDER BY TotalOrder DESC
+
+CREATE VIEW CategorySales_1996
+AS
+SELECT 
+   CategoryName, SUM(Ödenen) as TotalPrice
+FROM DetailedOrders
+WHERE OrderDate BETWEEN '1996-08-01' AND '1996-08-31'
+GROUP BY CategoryName
+
+SELECT * FROM CategorySales_1996
+
+SELECT ProductName, SUM(Quantity) TotalQuantity  FROM DetailedOrders
+GROUP BY ProductName ORDER BY TotalQuantity DESC
+
+SELECT ProductName, SUM(Ödenen)  TotalPrice  FROM DetailedOrders
+GROUP BY ProductName ORDER BY TotalPrice DESC
+
+
+SELECT *
+FROM Products WHERE ProductName LIKE '%Cha%'
+
+/*Nonclustered index:*/
+CREATE NONCLUSTERED INDEX ProductName ON Products
+(
+	[ProductName] ASC
+)
+GO
+
+DBCC INDEXDEFRAG (Northwind, 'Products', ProductName);
+GO
+
+--Stored Procedure: Parametrik olarak, sorgu üretebilen nesneler:
+
+CREATE PROC AddNewProduct
+  @name nvarchar(40),
+  @price money
+AS
+Insert into Products (ProductName, UnitPrice)
+            values (@name,@price)
+			
+AddNewProduct 'Domates',40
+
+
+CREATE PROC GetOrdersByDate
+  @start datetime,
+  @finish datetime
+AS
+SELECT *
+FROM Orders WHERE OrderDate BETWEEN @start AND @finish
+
+
+GetOrdersByDate '1997-12-01', '1997-12-31'
+
+-- Bu ürünü alanlar bunu da aldılar (5 ÜRÜN).
+-- 1. O ürünü alan tüm siparişleri bul.
+-- 2. O ürün hariç, diğer ürünlere bak.
+CREATE PROC BunuAlanlarBunudaAldi
+  @productId int
+AS
+SELECT TOP 5 ProductName, Sum(Quantity) as TotalQuantity
+FROM Products JOIN [Order Details] 
+ON Products.ProductID = [Order Details].ProductID
+WHERE [Order Details].OrderID IN (
+			SELECT OrderID FROM [Order Details] WHERE ProductID =@productId
+	   )
+AND [Order Details].ProductID !=@productId
+GROUP BY ProductName
+ORDER BY TotalQuantity desc
+
+BunuAlanlarBunudaAldi 4
+
+--Transaction: Bir eylemin, belirli bir durumda geri alınabilir olmasını sağlayan kurallı akış
+BEGIN TRY
+	BEGIN TRAN T1
+	   --Çalışması gereken ilk sorgu 
+	    BEGIN TRAN T2
+		 -- T1'in çalışmasına bağlı ikinci
+		COMMIT TRAN T2
+	COMMIT TRAN T1    
+END TRY
+BEGIN CATCH
+    ROLLBACK TRAN T1
+END CATCH
+------  Yeni sipariş ekleme prosedürü
+
+CREATE PROC AddNewOrderDetail
+  @customerId nchar(5),
+  @productId int,
+  @quantity int
+as
+  BEGIN TRY
+    BEGIN TRAN CreateOrder
+	   --1. Önce Orders tablosunda sipariş oluştur.
+	   DECLARE @lastOrderId int
+	   INSERT into Orders (CustomerID, OrderDate) values (@customerId, GETDATE())
+	   SET @lastOrderId = SCOPE_IDENTITY()
+	   BEGIN TRAN Create_Order_Details
+	      --2. 1. İşlemin sonunda elde ettiğin yeni OrderId ile sipariş detayı (Order Details) (ürün ve adet) ekle
+		  INSERT into [Order Details] (OrderID, ProductID, Quantity) values (@lastOrderId, @productId,@quantity)
+		  BEGIN TRAN UpdateProduct
+		    --3 Sipariş edilen adeti ürün stoğundan düş.
+			UPDATE Products SET UnitsInStock = UnitsInStock - @quantity WHERE ProductID = @productId
+		  COMMIT TRAN UpdateProduct
+	   COMMIT TRAN Create_Order_Details
+	COMMIT TRAN CreateOrder
+  END TRY
+  BEGIN CATCH
+     ROLLBACK TRAN CreateOrder
+  END CATCH
+   
+   AddNewOrderDetail 'ALFKI',3,4
+
+
+
+   SELECT TOP 1 * FROM Orders Order By OrderID Desc 
+   SELECT OrderID, ProductID,Quantity FROM [Order Details] WHERE OrderID = 11078
+   SELECT ProductName, UnitsInStock FROM Products WHERE ProductID = 3
+
+   -- Kılavuzu Trigger olanın burnu BUG'dan kurtulmaz!
+
+   -- ...yerine (instead of)
+   -- ...den sonra (after)
+
+   -- Ürün satın alındığında; o ürünün stoğundan satın alınan adet kadar düşen trigger:
+   --AFTER
+   CREATE TRIGGER stockUpdater
+   ON [Order Details] FOR Insert
+   AS
+   --Hangi üründen kaç adet
+   DECLARE @quantity int
+   DECLARE @productId int
+   SELECT @productId = ProductID, @quantity =Quantity  FROM inserted
+
+   UPDATE Products SET UnitsInStock = UnitsInStock - @quantity WHERE ProductID = @productId
+
+   SELECT ProductName, UnitsInStock FROM Products WHERE ProductID =2 
+
+   --Instead of.
+   SELECT ProductName, Discontinued FROM Products
+
+   CREATE TRIGGER TR_DeleteProduct
+   ON Products INSTEAD OF Delete
+   AS
+   DECLARE @id int
+   SELECT @id = ProductID FROM deleted
+   UPDATE Products SET Discontinued = 1 WHERE ProductId = @id 
+
+   /*
+    * Öğrenciler
+	* OgrenciId  Ad  Soyad  Puan
+	* 
+
+	* Geçenler
+	* OgrenciId  Ad  Soyad  Puan
+
+	* Kalanlar
+	* OgrenciId  Ad  Soyad  Puan
+
+	-- Otomatik olarak 50'nin üzerinde alan öğrenciyi, Geçenlere; altındaysa Kalanlar tablosuna kaydedecek trigger.
+	-- Geçenler tablosuna insert yapılmaya çalışıldığında INSTEAD OF ile kaydı Öğrencilere yönlendiren trigger
+
+	*
+
+	/
