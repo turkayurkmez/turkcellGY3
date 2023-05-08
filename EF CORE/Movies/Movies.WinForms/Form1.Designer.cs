@@ -28,12 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            buttonGetMovies = new Button();
+            listBoxMovies = new ListBox();
+            SuspendLayout();
+            // 
+            // buttonGetMovies
+            // 
+            buttonGetMovies.Location = new Point(124, 48);
+            buttonGetMovies.Name = "buttonGetMovies";
+            buttonGetMovies.Size = new Size(75, 23);
+            buttonGetMovies.TabIndex = 0;
+            buttonGetMovies.Text = "Getir";
+            buttonGetMovies.UseVisualStyleBackColor = true;
+            buttonGetMovies.Click += buttonGetMovies_Click;
+            // 
+            // listBoxMovies
+            // 
+            listBoxMovies.FormattingEnabled = true;
+            listBoxMovies.ItemHeight = 15;
+            listBoxMovies.Location = new Point(107, 77);
+            listBoxMovies.Name = "listBoxMovies";
+            listBoxMovies.Size = new Size(120, 94);
+            listBoxMovies.TabIndex = 1;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(347, 282);
+            Controls.Add(listBoxMovies);
+            Controls.Add(buttonGetMovies);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button buttonGetMovies;
+        private ListBox listBoxMovies;
     }
 }
