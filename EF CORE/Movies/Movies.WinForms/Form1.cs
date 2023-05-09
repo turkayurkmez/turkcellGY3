@@ -11,17 +11,20 @@ namespace Movies.WinForms
             InitializeComponent();
         }
 
-        private async void buttonGetMovies_Click(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
-            MoviesDbContext moviesDbContext = new MoviesDbContext();
-            EFMovieRepository eFMovieRepository = new EFMovieRepository(moviesDbContext);
-            MovieService movieService = new MovieService(eFMovieRepository);
+            var db = new MoviesDbContext();
+            var repository = new EFMovieRepository(db);
+            var movieService = new MovieService(repository);
 
-            var responses = await movieService.GetAllMovies();
-            foreach (var item in responses)
-            {
-                listBoxMovies.Items.Add($"{item.Name} {item?.Duration} dakika");
-            }
+            var list = await movieService.GetAllMovies();
+            dataGridViewMovies.DataSource = list.ToList();
+        }
+
+        private void buttonDirector_Click(object sender, EventArgs e)
+        {
+            FormDirectors formDirectors = new FormDirectors();
+            formDirectors.Show();
         }
     }
 }

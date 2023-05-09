@@ -35,7 +35,11 @@ namespace Movies.Data.Repositories
 
         public async Task<IList<Movie>> GetAllAsync()
         {
-            return await moviesDbContext.Movies.AsNoTracking().ToListAsync();
+            return await moviesDbContext.Movies.AsNoTracking()
+                                               .Include(m => m.Director)
+                                               .Include(m => m.Players)
+                                               .ThenInclude(p => p.Player)
+                                               .ToListAsync();
         }
 
         public async Task<Movie?> GetByIdAsync(int id)

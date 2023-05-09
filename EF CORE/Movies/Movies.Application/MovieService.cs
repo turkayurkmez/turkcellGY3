@@ -34,7 +34,19 @@ namespace Movies.Application
         public async Task<IEnumerable<MovieListResponse>> GetAllMovies()
         {
             var movies = await movieRepository.GetAllAsync();
-            var response = movies.Select(m => new MovieListResponse { Duration = m.Duration, Name = m.Name, Id = m.Id, Poster = m.Poster, PublishDate = m.PublishDate, Rating = m.Rating });
+
+            var response = movies.Select(m => new MovieListResponse
+            {
+                Duration = m.Duration,
+                Name = m.Name,
+                Id = m.Id,
+                Poster = m.Poster,
+                PublishDate = m.PublishDate,
+                Rating = m.Rating,
+                DirectoryName = $"{m.Director?.Name} {m.Director?.LastName}",
+                Players = string.Join(", ", m.Players.Select(pl => new { FullName = $"{pl.Player.Name} {pl.Player.LastName} {pl.Role}" }).ToList())
+
+            });
 
             return response;
         }
