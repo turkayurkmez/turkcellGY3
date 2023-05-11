@@ -30,6 +30,8 @@
         {
             splitContainer1 = new SplitContainer();
             dataGridViewMovies = new DataGridView();
+            buttonGetAllMovies = new Button();
+            buttonNewMovie = new Button();
             buttonPlayers = new Button();
             buttonDirector = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -53,6 +55,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(buttonGetAllMovies);
+            splitContainer1.Panel2.Controls.Add(buttonNewMovie);
             splitContainer1.Panel2.Controls.Add(buttonPlayers);
             splitContainer1.Panel2.Controls.Add(buttonDirector);
             splitContainer1.Size = new Size(1082, 554);
@@ -68,6 +72,26 @@
             dataGridViewMovies.RowTemplate.Height = 25;
             dataGridViewMovies.Size = new Size(1078, 356);
             dataGridViewMovies.TabIndex = 0;
+            // 
+            // buttonGetAllMovies
+            // 
+            buttonGetAllMovies.Location = new Point(51, 11);
+            buttonGetAllMovies.Name = "buttonGetAllMovies";
+            buttonGetAllMovies.Size = new Size(194, 23);
+            buttonGetAllMovies.TabIndex = 3;
+            buttonGetAllMovies.Text = "Filmleri Getir";
+            buttonGetAllMovies.UseVisualStyleBackColor = true;
+            buttonGetAllMovies.Click += buttonGetAllMovies_Click;
+            // 
+            // buttonNewMovie
+            // 
+            buttonNewMovie.Location = new Point(51, 104);
+            buttonNewMovie.Name = "buttonNewMovie";
+            buttonNewMovie.Size = new Size(194, 23);
+            buttonNewMovie.TabIndex = 2;
+            buttonNewMovie.Text = "Yeni Film Ekle";
+            buttonNewMovie.UseVisualStyleBackColor = true;
+            buttonNewMovie.Click += buttonNewMovie_Click;
             // 
             // buttonPlayers
             // 
@@ -112,5 +136,7 @@
         private DataGridView dataGridViewMovies;
         private Button buttonPlayers;
         private Button buttonDirector;
+        private Button buttonGetAllMovies;
+        private Button buttonNewMovie;
     }
 }

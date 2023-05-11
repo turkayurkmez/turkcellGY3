@@ -8,5 +8,7 @@
         public int? Duration { get; set; }
         public double? Rating { get; set; }
         public int? DirectorId { get; set; }
+
+
     }
 }

@@ -51,6 +51,12 @@ namespace Movies.Application
             return response;
         }
 
+
+
+        public async Task AddPlayerToMovie(int movieId, List<int> players)
+        {
+            await movieRepository.AddPlayerToMovie(movieId, players);
+        }
         public Task UpdateMovie(UpdateMovieRequest updateMovie)
         {
             throw new NotImplementedException();

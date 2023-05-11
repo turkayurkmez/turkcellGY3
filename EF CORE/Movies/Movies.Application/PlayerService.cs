@@ -5,7 +5,7 @@ using Movies.Entities;
 
 namespace Movies.Application
 {
-    public class PlayerService
+    public class PlayerService : IPlayerService
     {
         private readonly IPlayerRepository repository;
 

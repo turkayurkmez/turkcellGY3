@@ -8,7 +8,7 @@
         public int PlayerId { get; set; }
         public Player Player { get; set; }
 
-        public string Role { get; set; }
+        public string? Role { get; set; }
 
     }
 }
