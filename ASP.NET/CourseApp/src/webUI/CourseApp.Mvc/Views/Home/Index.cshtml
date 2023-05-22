@@ -1,22 +1,42 @@
-﻿@model IEnumerable<CourseDisplayResponse>
+﻿@model PaginationCourseViewModel
 @{
     ViewData["Title"] = "Home Page";
+    var columnCount = 0;
+
+
+
 }
 
-<div class="row">
-    @foreach (var courseDisplay in Model)
+<div class="row m-4">
+    @foreach (var courseDisplay in Model.Courses)
     {
+        @if (columnCount != 0 && columnCount % 4 == 0)
+        {
+            @:</div><div class="row m-4">
+
+        }
+      
         <div class="col-3">
-
-            <div class="card">
-                <img src="@courseDisplay.ImageUrl" class="img-fluid" />
-                <div class="card-body">
-                    <h4 class="card-title">@courseDisplay.Name</h4>
-                    <p class="card-text">@courseDisplay.Description</p>
-                    <p class="card-text">@courseDisplay.Price</p>
-
-                </div>
-            </div>
+           <partial name="_CourseDisplay" model="courseDisplay"/>
         </div>
+
+          columnCount++;
     }
 </div>
+
+<div page-model="Model.PagingInfo" page-action="Index"></div>
+
+@*<div>
+  <ul class="pagination pagination-lg">
+    @*<li class="page-item active" aria-current="page">
+      <span class="page-link">1</span>
+    </li>
+    @for (int i = 1; i <= ViewBag.TotalPage; i++)
+     {
+       <li class="page-item @(i==ViewBag.PageNo ? "active":"")" ><a asp-action="Index" asp-route-pageNo="@i" class="page-link">@i</a></li>
+     }
+   
+ 
+  </ul>
+ </div>
+*@
