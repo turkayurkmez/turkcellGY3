@@ -1,0 +1,15 @@
+﻿
+    <p>Hoşgeldin @ViewBag.Name</p>
+    @if (ViewBag.Month == 5)
+    {
+        <p>OO Mayıs gelmiş. Bahar gelmiş</p>
+    }
+
+    <ul>
+        @foreach (var item in ViewBag.Items)
+        {
+            <li>@item</li>
+        }    
+    </ul>
+ 
+    <a asp-action="Privacy">Gizlilik bildirimi</a> 

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CourseDisplayResponse>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    @foreach (var courseDisplay in Model)
+    {
+        <div class="col-3">
+
+            <div class="card">
+                <img src="@courseDisplay.ImageUrl" class="img-fluid" />
+                <div class="card-body">
+                    <h4 class="card-title">@courseDisplay.Name</h4>
+                    <p class="card-text">@courseDisplay.Description</p>
+                    <p class="card-text">@courseDisplay.Price</p>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

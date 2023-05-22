@@ -1,0 +1,9 @@
+﻿@model UserRegisterModel
+
+
+<form asp-action="Register">
+    <input asp-for="UserName" placeholder="Kullanıcı adı" /><br />
+    <input asp-for="Password" placeholder="Şifre" /><br />
+    <input asp-for="BirthDate" />
+    <button type="submit">Gönder</button>
+</form>
