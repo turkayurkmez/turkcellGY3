@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "AlertifyJS@1.13.1",
+      "destination": "wwwroot/AlertifyJS/",
+      "files": [
+        "alertify.min.js",
+        "css/alertify.min.css"
+      ]
+    }
+  ]
+}

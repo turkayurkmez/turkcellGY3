@@ -2,9 +2,6 @@
 @{
     ViewData["Title"] = "Home Page";
     var columnCount = 0;
-
-
-
 }
 
 <div class="row m-4">
@@ -13,19 +10,15 @@
         @if (columnCount != 0 && columnCount % 4 == 0)
         {
             @:</div><div class="row m-4">
-
-        }
-      
+        }      
         <div class="col-3">
            <partial name="_CourseDisplay" model="courseDisplay"/>
         </div>
-
           columnCount++;
     }
 </div>
-
+@*<a href="/Shopping/AddCourse/1">tıkla</a>*@
 <div page-model="Model.PagingInfo" page-action="Index"></div>
-
 @*<div>
   <ul class="pagination pagination-lg">
     @*<li class="page-item active" aria-current="page">
@@ -40,3 +33,43 @@
   </ul>
  </div>
 *@
+
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">      
+      <strong class="me-auto">Sepet Bilgisi</strong>  
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      
+    </div>
+  </div>
+</div>
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function(){
+            
+            $('.basket').on('click',function(){
+                let id = $(this).data('id');
+                $.ajax({
+                    url:'/Shopping/AddCourse/'+id,
+                    type:'GET',
+                    success:function(data){
+                        //console.log(data)
+                        $('.toast-body').text(data.message);
+                        //const toastLiveExample = document.getElementById('liveToast');
+                        //const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                         //toastBootstrap.show();
+                         alertify.success(data.message);
+                    },
+                    error: function(err){
+                        console.log('hata',error);
+                    }
+                });
+            });
+        });
+    </script>
+}

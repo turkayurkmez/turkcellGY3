@@ -14,5 +14,11 @@ namespace CourseApp.Services.Extensions
         {
             return mapper.Map<IEnumerable<CourseDisplayResponse>>(courses);
         }
+
+        public static IEnumerable<CategoryDisplayResponse> ConvertToDto(this IEnumerable<Category> categories, IMapper mapper)
+        {
+            return mapper.Map<IEnumerable<CategoryDisplayResponse>>(categories);
+        }
+
     }
 }
