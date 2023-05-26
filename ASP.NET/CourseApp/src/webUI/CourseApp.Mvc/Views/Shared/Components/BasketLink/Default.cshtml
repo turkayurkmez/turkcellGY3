@@ -1,0 +1,13 @@
+﻿@model CourseCollection
+@if (Model == null)
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Shopping" asp-action="Index">Sepetim</a>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Shopping" asp-action="Index">Sepetim <span class="badge rounded-pill bg-black">@Model.TotalCoursesCount()</span> </a>
+    </li>
+}

@@ -26,6 +26,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        @await Component.InvokeAsync("BasketLink")
                     </ul>
                 </div>
             </div>

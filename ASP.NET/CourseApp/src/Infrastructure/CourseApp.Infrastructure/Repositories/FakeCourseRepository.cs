@@ -31,6 +31,17 @@ namespace CourseApp.Infrastructure.Repositories
 
             };
         }
+
+        public Task CreateAsync(Course entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Course? Get(int id)
         {
             return _courses.Find(c => c.Id == id);
@@ -51,6 +62,11 @@ namespace CourseApp.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
+        public IList<Course> GetAllWithPredicate(Expression<Func<Course, bool>> predicate)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<Course?> GetAsync(int id)
         {
             throw new NotImplementedException();
@@ -62,6 +78,11 @@ namespace CourseApp.Infrastructure.Repositories
         }
 
         public IEnumerable<Course> GetCoursesByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateAsync(Course entity)
         {
             throw new NotImplementedException();
         }

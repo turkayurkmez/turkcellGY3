@@ -1,4 +1,4 @@
-﻿using CourseApp.Entities;
+﻿using CourseApp.DataTransferObjects.Responses;
 
 namespace CourseApp.Mvc.Models
 {
@@ -30,7 +30,7 @@ namespace CourseApp.Mvc.Models
 
     public class CourseItem
     {
-        public Course Course { get; set; }
+        public CourseDisplayResponse Course { get; set; }
         public int Quantity { get; set; }
         public bool? ApplyCoupon { get; set; }
 

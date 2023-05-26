@@ -1,0 +1,42 @@
+﻿@model CourseCollection
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Sepetiniz</h1>
+@if (Model.CourseItems.Count == 0)
+{
+    <div class="alert alert-danger">
+        Sepetinizde kurs yok!
+    </div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Kurs Adı</th>
+                <th>Fiyatı</th>
+                <th>Adet</th>
+                <th>Ara Toplam</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var courseItem in Model.CourseItems)
+            {
+                <tr>
+                    <td>@courseItem.Course.Name</td>
+                    <td>@courseItem.Course.Price</td>
+                    <td>@courseItem.Quantity</td>
+                    <td>@(courseItem.Quantity * courseItem.Course.Price)</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Toplam: @Model.TotalCoursePrice()</td>
+            </tr>
+        </tfoot>
+    </table>
+}
+
