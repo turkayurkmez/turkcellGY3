@@ -2,6 +2,7 @@ using CourseApp.Infrastructure.Data;
 using CourseApp.Infrastructure.Repositories;
 using CourseApp.Services;
 using CourseApp.Services.Mappings;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -13,6 +14,7 @@ builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<ICourseRepository, EFCourseRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 //IoC
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
@@ -24,6 +26,17 @@ builder.Services.AddSession(opt =>
 var connectionString = builder.Configuration.GetConnectionString("db");
 builder.Services.AddDbContext<CourseDbContext>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(opt =>
+                {
+                    opt.LoginPath = "/Users/Login";
+                    opt.AccessDeniedPath = "/Users/AccessDenied";
+                    opt.ReturnUrlParameter = "gidilecekSayfa";
+                });
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -47,6 +60,7 @@ app.UseSession();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
