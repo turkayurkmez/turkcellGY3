@@ -1,6 +1,9 @@
+using CourseApp.Infrastructure.Data;
 using CourseApp.Infrastructure.Repositories;
 using CourseApp.Services;
 using CourseApp.Services.Mappings;
+using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +21,9 @@ builder.Services.AddSession(opt =>
     opt.IdleTimeout = TimeSpan.FromMinutes(15);
 });
 
+var connectionString = builder.Configuration.GetConnectionString("db");
+builder.Services.AddDbContext<CourseDbContext>(opt => opt.UseSqlServer(connectionString));
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,6 +33,12 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+var context = services.GetRequiredService<CourseDbContext>();
+context.Database.EnsureCreated();
+DbSeeding.SeedDatabase(context);
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

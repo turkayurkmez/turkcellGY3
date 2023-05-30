@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CourseApp.Entities
+namespace CourseApp.DataTransferObjects.Requests
 {
-    public class Course : IEntity
+    public class CreateNewCourseRequest
     {
-        public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Kurs adını boş bırakmayınız")]
+        [MinLength(3, ErrorMessage = "En az üç harf :)")]
         public string Name { get; set; }
         public string? Description { get; set; }
         public DateTime? StartDate { get; set; }
@@ -15,7 +15,5 @@ namespace CourseApp.Entities
         public string ImageUrl { get; set; } = "https://loremflickr.com/320/240";
         public int? CategoryId { get; set; }
         public byte? Rating { get; set; }
-        public Category? Category { get; set; }
-
     }
 }
