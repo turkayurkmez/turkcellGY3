@@ -7,8 +7,13 @@ namespace CourseApp.Services
     {
         Task CreateCourseAsync(CreateNewCourseRequest createNewCourseRequest);
         CourseDisplayResponse GetCourse(int id);
-        IEnumerable<CourseDisplayResponse> GetCourseDisplayResponses();
 
+        Task<UpdateCourseRequest> GetCourseForUpdate(int id);
+
+        IEnumerable<CourseDisplayResponse> GetCourseDisplayResponses();
         IEnumerable<CourseDisplayResponse> GetCoursesByCategory(int categoryId);
+
+        Task UpdateCourse(UpdateCourseRequest updateCourseRequest);
+        Task<bool> CourseIsExists(int courseId);
     }
 }

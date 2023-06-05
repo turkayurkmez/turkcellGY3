@@ -96,7 +96,7 @@ namespace CourseApp.Mvc.Controllers
 
         }
 
-        [ResponseCache(Duration = 70, VaryByQueryKeys = new[] { "id" }, Location = ResponseCacheLocation.)]
+        [ResponseCache(Duration = 70, VaryByQueryKeys = new[] { "id" }, Location = ResponseCacheLocation.Client)]
         public IActionResult Privacy(int id)
         {
             ViewBag.Id = id;
