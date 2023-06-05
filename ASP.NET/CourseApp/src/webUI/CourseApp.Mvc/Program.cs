@@ -1,21 +1,13 @@
 using CourseApp.Infrastructure.Data;
-using CourseApp.Infrastructure.Repositories;
-using CourseApp.Services;
+using CourseApp.Mvc.Extensions;
 using CourseApp.Services.Mappings;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<ICourseService, CourseService>();
-builder.Services.AddScoped<ICourseRepository, EFCourseRepository>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
-//IoC
+// Add services to the container.
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
 builder.Services.AddSession(opt =>
@@ -24,7 +16,10 @@ builder.Services.AddSession(opt =>
 });
 
 var connectionString = builder.Configuration.GetConnectionString("db");
-builder.Services.AddDbContext<CourseDbContext>(opt => opt.UseSqlServer(connectionString));
+
+builder.Services.AddInjections(connectionString);
+
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -34,6 +29,14 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
                     opt.AccessDeniedPath = "/Users/AccessDenied";
                     opt.ReturnUrlParameter = "gidilecekSayfa";
                 });
+
+//Caching:
+
+builder.Services.AddMemoryCache();
+builder.Services.AddResponseCaching(opt =>
+{
+    opt.SizeLimit = 100000;
+});
 
 
 
@@ -54,6 +57,7 @@ context.Database.EnsureCreated();
 DbSeeding.SeedDatabase(context);
 
 app.UseHttpsRedirection();
+app.UseResponseCaching();
 app.UseStaticFiles();
 
 app.UseSession();
