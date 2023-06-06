@@ -69,5 +69,24 @@ namespace CourseApp.Services
         {
             throw new NotImplementedException();
         }
+
+        public async Task<IEnumerable<CourseDisplayResponse>> SearchByName(string name)
+        {
+            var courses = await _repository.GetCoursesByName(name);
+            return courses.ConvertToDisplayResponses(_mapper);
+        }
+
+        public async Task<int> CreateCourseAndReturnIdAsync(CreateNewCourseRequest createNewCourseRequest)
+        {
+            var course = _mapper.Map<Course>(createNewCourseRequest);
+            await _repository.CreateAsync(course);
+            return course.Id;
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            await _repository.DeleteAsync(id);
+
+        }
     }
 }

@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F219F40E-DAF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "webUI", "webUI", "{DE565097-5B10-4A0B-9853-44D1CBCBF96E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseApp.Mvc", "src\webUI\CourseApp.Mvc\CourseApp.Mvc.csproj", "{9F4C12D7-FF4F-49A9-871E-06389C1EDB1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseApp.Mvc", "src\webUI\CourseApp.Mvc\CourseApp.Mvc.csproj", "{9F4C12D7-FF4F-49A9-871E-06389C1EDB1B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domains", "Domains", "{16588414-0B7C-4130-991E-D8007471F7F5}"
 EndProject
@@ -15,13 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseApp.Entities", "src\D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{B91A4027-BD33-4753-8638-4ABC3E1FFBA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseApp.Services", "src\Application\CourseApp.Services\CourseApp.Services.csproj", "{C2DD7C4E-41CA-410D-8D6D-D0E3052103B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseApp.Services", "src\Application\CourseApp.Services\CourseApp.Services.csproj", "{C2DD7C4E-41CA-410D-8D6D-D0E3052103B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseApp.DataTransferObjects", "src\Application\CourseApp.DataTransferObjects\CourseApp.DataTransferObjects.csproj", "{BC9D9D9F-ADD3-427E-965A-486073A63957}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseApp.DataTransferObjects", "src\Application\CourseApp.DataTransferObjects\CourseApp.DataTransferObjects.csproj", "{BC9D9D9F-ADD3-427E-965A-486073A63957}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4A87126F-75BC-4105-91B8-217D6FE021FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseApp.Infrastructure", "src\Infrastructure\CourseApp.Infrastructure\CourseApp.Infrastructure.csproj", "{E608AA82-3742-489C-913A-D86493DF9843}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseApp.Infrastructure", "src\Infrastructure\CourseApp.Infrastructure\CourseApp.Infrastructure.csproj", "{E608AA82-3742-489C-913A-D86493DF9843}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{105265D5-C2DA-4D6A-8617-65F4C412C276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseApp.API", "src\Web API\CourseApp.API\CourseApp.API.csproj", "{BB3B0863-0B8A-4F4A-BCFF-4C781722E01C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,10 @@ Global
 		{E608AA82-3742-489C-913A-D86493DF9843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E608AA82-3742-489C-913A-D86493DF9843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E608AA82-3742-489C-913A-D86493DF9843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB3B0863-0B8A-4F4A-BCFF-4C781722E01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB3B0863-0B8A-4F4A-BCFF-4C781722E01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB3B0863-0B8A-4F4A-BCFF-4C781722E01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB3B0863-0B8A-4F4A-BCFF-4C781722E01C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,8 @@ Global
 		{BC9D9D9F-ADD3-427E-965A-486073A63957} = {B91A4027-BD33-4753-8638-4ABC3E1FFBA6}
 		{4A87126F-75BC-4105-91B8-217D6FE021FD} = {F219F40E-DAF9-462F-A851-B281B2C3C6AE}
 		{E608AA82-3742-489C-913A-D86493DF9843} = {4A87126F-75BC-4105-91B8-217D6FE021FD}
+		{105265D5-C2DA-4D6A-8617-65F4C412C276} = {F219F40E-DAF9-462F-A851-B281B2C3C6AE}
+		{BB3B0863-0B8A-4F4A-BCFF-4C781722E01C} = {105265D5-C2DA-4D6A-8617-65F4C412C276}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B459588-B4B2-43CF-86D9-12105299EBF0}
